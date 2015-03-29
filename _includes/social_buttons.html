@@ -1,5 +1,5 @@
 <ul class="external-nav">
   {% for socialButton in site.data.social_buttons %}
-  <li><a class="fa {{socialButton.name | downcase}}" href="{{socialButton.url}}"><span class="screen-reader">{{socialButton.name}}</span></a></li>
+  <li><a class="fa {{socialButton.name | downcase}}" href="{{socialButton.url}}" rel="me"><span class="screen-reader">{{socialButton.name}}</span></a></li>
   {% endfor %}
 </ul>
