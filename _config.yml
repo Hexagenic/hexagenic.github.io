@@ -13,12 +13,6 @@ author:
   full_name: Mattias Hermansson
   email: hexagenic@gmail.com
 
-github:
-  repository_url: https://github.com/hexagenic/hexagenic.github.io
-  build_revision: 1a9c2f7c89a43e0874236177066471b31257b4e3
-  versions:
-    jekyll: 1.4.0
-
 # Scopes
 
 defaults:
