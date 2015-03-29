@@ -1,0 +1,14 @@
+{% if page.type == "posts" %}
+	{% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
+{% elsif page.type == "pages" %}
+	{% assign posts=site.pages | where:"name", page.name | sort: 'path' %}
+{% endif %}
+
+
+{% for post in posts %}
+{% assign post_url = post.url | remove: "index.html" %}
+{% comment %}
+	site.pages url includes index.html, remove it.
+{% endcomment %}
+<link rel="alternate" href="{{site.url}}{{post_url}}" hreflang="{{post.lang}}" />
+{% endfor %}
