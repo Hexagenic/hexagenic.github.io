@@ -1,5 +1,4 @@
 ---
-title: Jekyll Som En Flerspråkig Blogg
 name: jekyll-multilingual
 category: sv
 ---
