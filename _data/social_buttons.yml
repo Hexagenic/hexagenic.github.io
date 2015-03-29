@@ -1,0 +1,19 @@
+- name: GitHub
+  faIcon: \f09b
+  url: https://github.com/hexagenic
+
+- name: DeviantArt
+  faIcon: \f1bd
+  url: https://hexagenic.deviantart.com
+
+- name: Tumblr
+  faIcon: \f173
+  url: http://tumblr.hexagenic.net
+
+- name: Doodles
+  faIcon: \f040
+  url: http://doodles.hexagenic.net
+
+- name: Twitter
+  faIcon: \f099
+  url: https://twitter.com/hexagenic

@@ -1,0 +1,170 @@
+//@import 'reset';
+@import 'typography';
+@import 'mixins';
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+header[rel=banner] h1 {
+	float: left;
+	font-weight: bold;
+	color: $accent-dark;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	position: relative;
+	background-color: $accent;
+}
+
+div.column {
+	background-color: white;
+	height: 100%
+}
+
+header {
+	nav {
+		float: right;
+		display: block;
+
+		ul { display: block; padding: 0px; margin: 0px;}
+		li, a { display: inline-block; padding: 2.5px;}
+	}
+
+	nav[rel=language-selector] {
+		padding-top: 0.7em;
+		float: right;
+		ul {
+			float: right;
+		}
+		li {
+			padding: 0;
+			a {
+				padding: 0;
+				display: block;
+				width: 1.5em;
+				text-align: center;
+
+			}
+		}
+	}	
+
+	a {
+		color: $accent-dark;
+		text-decoration: none;
+
+		svg.logo path {
+			stroke: $accent-dark;
+			&.hexagon { fill: $accent-dark; }
+			&.line { fill: none; }
+		}
+		
+		&:hover {
+			color: $accent-light;
+			svg.logo path {
+				stroke: $accent-light;
+				&.hexagon { fill: $accent-light; }
+			}
+		}
+
+		&.current {
+			font-weight: bold;
+			color: black;
+			&:hover {
+				color: $accent-light;
+			}
+		}
+	}
+}
+
+.headerrow {
+	width: 100%;
+	clear: both;
+}
+
+.headercol {
+	max-width: 40em;
+	margin: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.navigation {
+	background-color: lighten(saturate($accent, 10%), 15%);
+	nav {
+		float: none;
+	}
+}
+
+.site-nav{
+	float:left;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	
+	li a.feed {
+		vertical-align: middle;
+		font-size: 1.5em;
+		margin-top:-0.25em;
+		margin-bottom: -0.25em;
+		&::before {
+			content: '\f09e';
+		}
+	}
+}
+
+.external-nav {
+	float: right;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	font-size: 1.5em;
+	li {
+		text-align: center;
+	}
+}
+
+.site-nav, .external-nav {
+	
+	@include withPhone() {
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+.screen-reader {
+	position: absolute;
+	left: -20000px;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+}
+
+.date {
+	display: inline-block;
+	width: 3em;
+	text-align: right;
+	sup {
+		vertical-align: top;
+		font-size: 10px;
+	}
+}
+
+.article-list {
+	padding: 0;
+	margin-left: 1em;
+	list-style-type: none;
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	display: inline-block;
+}

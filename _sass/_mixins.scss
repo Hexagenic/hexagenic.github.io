@@ -1,0 +1,7 @@
+@import 'variables';
+
+@mixin withPhone() {
+	@media only screen  and (max-width: $media-phone-width){
+		@content;
+	}
+}

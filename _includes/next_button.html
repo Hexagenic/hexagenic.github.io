@@ -1,0 +1,10 @@
+{% assign t = site.data.translations[page.lang] %}
+{% assign next_post = include.next_post %}
+
+{% if next_post == nil %}
+	<!-- No next post -->
+{% elsif next_post.lang == page.lang %}
+	<a href="{{ next_post.url }}" rel="next" title="{{next_post.title}}">{{t.navigation.next}} &rarr;</a>
+{% else %}
+	{% include next_button.html next_post=next_post.next %}
+{% endif %}

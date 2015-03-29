@@ -1,0 +1,17 @@
+<footer>
+	{% assign t = site.data.translations[page.lang] %}
+
+	<p>&copy; <a href="mailto:{{site.author.email}}">{{ site.author.full_name }}</a> {{ site.time | date: "%Y" }} <br>
+
+	{% capture gh_source_url %}{{ site.github.repository_url }}/blob/master/{{ page.path }}{% endcapture %}
+	{% capture gh_rev_url %}{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}{% endcapture %}
+
+	{% assign gendate = site.time | date: "%F %R" %}
+	{% capture jekyllLink %}<a href="https://github.com/jekyll/jekyll/" rel="nofollow">Jekyll {{ site.github.versions.jekyll }}</a>
+	{% endcapture %}
+
+	{{ t.footer.generated | replace: "$at$", gendate | replace: "$by$", jekyllLink}} <br>
+	
+	<a href="{{gh_source_url}}">{{ t.footer.pagesource }}</a>
+	</p>
+</footer>

@@ -1,0 +1,10 @@
+{% assign t = site.data.translations[page.lang] %}
+{% assign prev_post = include.prev_post %}
+
+{% if prev_post == nil %}
+	<!-- No previous post -->
+{% elsif prev_post.lang == page.lang %}
+	<a href="{{ prev_post.url }}" rel="prev" title="{{prev_post.title}}">&larr; {{t.navigation.previous}}</a>
+{% else %}
+	{% include prev_button.html prev_post=prev_post.previous %}
+{% endif %}

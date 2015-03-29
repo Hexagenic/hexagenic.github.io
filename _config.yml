@@ -1,0 +1,73 @@
+encoding: utf-8
+timezone: Europe/Stockholm
+exclude: [LICENSE, README.md, Gemfile, Gemfile.lock]
+permalink: /:categories/:year/:month/:title/
+languages: [en, sv]
+nav: [home, about]
+url: http://hexagenic.net
+
+
+solarizedTheme: dark
+
+author:
+  full_name: Mattias Hermansson
+  email: hexagenic@gmail.com
+
+github:
+  repository_url: https://github.com/hexagenic/hexagenic.github.io
+  build_revision: 1a9c2f7c89a43e0874236177066471b31257b4e3
+  versions:
+    jekyll: 1.4.0
+
+# Scopes
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: posts
+    values:
+      type: posts
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      type: pages
+
+  - scope:
+      path: _posts/ja
+    values:
+      lang: ja
+
+  - scope:
+      path: _posts/en
+    values:
+      lang: en
+
+  - scope:
+      path: _posts/sv
+    values:
+      lang: sv
+
+# Generators
+
+highlighter: pygments
+sass:
+  style: :compressed
+
+kramdown:
+  header_offset: 2
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+
+#gems:
+#  - jekyll-redirect-from
+#  - jemoji

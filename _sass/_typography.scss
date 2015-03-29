@@ -1,0 +1,90 @@
+body, h1, h2, h3, h4 {
+	font-family: Arial, "Sans-serif";
+	font-size: 15em *  (1 / 16);
+}
+
+html:lang(ja) { // Correct font for japanese document
+	body, h1, h2, h3, h4 {
+		font-family: Arial, "Hiragino Kaku Gothic Pro","Meiryo","Osaka","MS PGothic";
+	}
+}
+
+[lang=ja] { // Correct font for japanese tag
+	font-family: arial, "Hiragino Kaku Gothic Pro","Meiryo","Osaka","MS PGothic";
+}
+
+div.column {
+	margin: auto;
+	max-width: 40em;
+}
+
+main {
+	margin-top: 1.25em;
+	margin-bottom: 1.25em;
+   
+	/* Define rest of headers when needed */
+	
+	h2 { font-size: 2.25em;  padding-left: 1em * (1 / 2.25); }
+	h3 { font-size: 1.5em;   padding-left: 1em * (1 / 1.5);}
+	h4 { font-size: 1.125em; padding-left: 1em * (1 / 1.25);}
+	h5 { font-size: 0.875em; padding-left: 1em * (1 / 0.875); }
+	
+	h2, h3, h4 {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		font-weight: bold;
+	} 
+
+	p, div.highlight, ul, ol {
+		margin-top: 1.25em;
+		margin-bottom: 1.25em;
+	}
+
+	p {	
+		//font-size: 0.75em;
+		line-height: 1.25;
+		margin-bottom: 0;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	p code {
+		padding-left: 0.25em;
+		padding-right: 0.25em;
+		padding-top: 0.125em;
+		padding-bottom: 0.125em;
+		border-radius: 0.25em;
+		font-family: 'Ubuntu Mono', Consolas, Inconsolata;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	pre {
+		display: block;
+		font-family: 'Ubuntu Mono', Consolas, Inconsolata;
+		font-size: 14px;
+		padding: 1.25em;
+		overflow-x: auto;
+		tab-size: 4;
+	}
+
+}
+
+nav.article-buttons {
+	a {
+		margin: 1.25em;
+	}
+
+	a[rel=prev] {
+		float: left;
+	}
+
+	a[rel=next] {
+		float:right;
+	}
+}
+
+footer {
+	margin-top: 1.25em;
+	margin-bottom: 1.25em;
+}

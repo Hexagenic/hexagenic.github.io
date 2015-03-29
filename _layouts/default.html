@@ -1,0 +1,53 @@
+---
+layout: compress
+---
+{% assign t = site.data.translations[page.lang] %}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="icon" type="image/ico" href="/favicon.ico">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+	<title>{{ t.site.title }}</title>
+</head>
+<body>
+	<header rel="banner">
+		<div class="headercol">
+			{% include language_selector.html %}
+			{% assign home_page = site.pages | where:"nav", "home" | where:"lang", page.lang |first %}
+
+			<h1><a href="{{home_page.url | remove:"index.html"}}" rel="home">
+				{% include logo.svg %}{{ t.site.title }}
+			</a></h1>
+		</div>
+		<div class="headerrow navigation"><nav class="headercol">
+			{% include social_buttons.html %}
+			{% include site_nav.html %}
+			<div class="spacer" style="clear: both;"></div>
+		</nav></div>
+		<div class="spacer" style="clear: both;"></div>
+	</header>
+	<div class="column">
+		<main>
+			{% if page.type == "posts" %}
+			<article>
+			{% endif %}
+			<h2>{{ page.title }}</h2>
+			{{ content }}
+			{% if page.type == "posts" %}
+			<nav class="article-buttons">
+				{% include next_button.html next_post=page.next %}
+				{% include prev_button.html prev_post=page.previous %}
+				<div class="spacer" style="clear: both;"></div>
+			</nav>
+			</article>
+			{% endif %}
+		</main>
+		{% include footer.html %}
+	</div>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

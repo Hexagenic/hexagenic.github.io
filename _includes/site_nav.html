@@ -1,0 +1,17 @@
+<ul class="site-nav">
+	{% for nav in site.nav %}
+		{% assign nav_page = site.pages | where:"nav", nav | where:"lang", page.lang |first %}
+		{% assign nav_url = nav_page.url | remove: "index.html" %}
+		{% comment %}
+			site.pages url includes index.html, remove it.
+		{% endcomment %}
+		{% if nav_page.url == page.url %}
+		  {% assign classes = "current" %}
+		{% else %}
+		  {% assign classes = "" %}
+		{% endif %} 
+		<li><a href="{{nav_url}}" class="{{classes}}">{{ nav_page.title }}</a></li>
+	{% endfor %}
+	{% assign home_page = site.pages | where:"nav", "home" | where:"lang", page.lang |first %}
+	<li><a class="feed fa" href="{{home_page.url | remove:"index.html"}}feed.xml"></a><li>
+</ul>

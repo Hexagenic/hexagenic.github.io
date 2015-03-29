@@ -1,0 +1,17 @@
+---
+---
+
+{% if site.solarizedTheme %}
+$solarized-theme: {{site.solarizedTheme}};
+{% endif %}
+
+@import 'main';
+@import 'highlight';
+
+/* Dynamically generated rules based on jekyll conf using Liquid */
+
+{% for socialButton in site.data.social_buttons %}
+.{{ socialButton.name | downcase }}:before {
+	content: '{{ socialButton.faIcon }}';
+}
+{% endfor %}

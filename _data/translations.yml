@@ -1,0 +1,44 @@
+en:
+  site:
+    title: Hexagenic.net
+  navigation:
+    home: Home
+    posts: Articles
+    next: Next
+    previous: Previous
+  i18n:
+    en: English
+    sv: Swedish
+    ja: Japanese
+  footer:
+    generated: Generated $at$ by $by$
+    pagesource: Page source
+
+ja:
+  site:
+    title: Hexagenic.net
+  navigation:
+    home: ホーム
+    posts: 記事
+    next: 前
+    previous: 後
+  i18n:
+    en: 英語
+    sv: スウェーデン語
+    ja: 日本語
+
+sv:
+  site:
+    title: Hexagenic.net
+  navigation:
+    home: Hem
+    posts: Artiklar
+    next: Nästa
+    previous: Förgående
+  i18n:
+    en: Engelska
+    sv: Svenska
+    ja: Japanska
+  footer:
+    generated: Genererades $at$ av $by$
+    pagesource: Sidkälla

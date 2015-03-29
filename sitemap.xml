@@ -1,0 +1,29 @@
+---
+layout: compress
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/scheman/webbplatskarta/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {% for post in site.posts %}
+  <url>
+    <loc>{{site.url}}{{post.url}}</loc>
+    {% assign alts = site.posts | where: "name", post.name %}
+    {% for alt in alts %}
+      <xhtml:link rel="alternate" hreflang="{{alt.lang}}" href="{{site.url}}{{alt.url}}" />
+    {% endfor %}
+  </url>
+  {% endfor %}
+  {% for cpage in site.pages %}
+  {% if cpage.nav %}
+  <url>
+    <loc>{{site.url}}{{cpage.url | remove: "index.html"}}</loc>
+    {% assign alts = site.pages | where: "name", cpage.name %}
+    {% for alt in alts %}
+      {% if alt.lang %}
+      <xhtml:link rel="alternate" hreflang="{{alt.lang}}" href="{{site.url}}{{alt.url | remove: "index.html"}}" />
+      {% endif %}
+    {% endfor %}
+  </url>
+  {% endif %}
+  {% endfor %}
+</urlset>
