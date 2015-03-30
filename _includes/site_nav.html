@@ -13,5 +13,10 @@
 		<li><a href="{{nav_url}}" class="{{classes}}">{{ nav_page.title }}</a></li>
 	{% endfor %}
 	{% assign home_page = site.pages | where:"nav", "home" | where:"lang", page.lang |first %}
-	<li><a class="feed fa" href="{{home_page.url | remove:"index.html"}}feed.xml"></a><li>
+	{% if page.nav == "home" %}
+		{% assign rss_rel = "alternate" %}
+	{% else %}
+		{% assign rss_rel = "home" %}
+	{% endif %}
+	<li><a class="feed fa" rel="{{rss_rel}}" type="application/rss+xml" href="{{home_page.url}}feed.xml"></a><li>
 </ul>

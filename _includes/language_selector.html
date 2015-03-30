@@ -1,7 +1,7 @@
 {% if page.type == "posts" %}
 	{% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
-{% elsif page.type == "pages" %}
-	{% assign posts=site.pages | where:"name", page.name | sort: 'path' %}
+{% else %}
+	{% assign posts=site.pages | where:"nav", page.nav | sort: 'path' %}
 {% endif %}
 
 <nav rel="language-selector">

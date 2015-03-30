@@ -12,6 +12,13 @@ layout: compress
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 	{% include header_link_rel_hreflang.html %}
+	{% assign home_page = site.pages | where:"nav", "home" | where:"lang", page.lang |first %}
+	{% if page.nav == "home" %}
+		{% assign rss_rel = "alternate" %}
+	{% else %}
+		{% assign rss_rel = "home" %}
+	{% endif %}
+	<link rel="{{rss_rel}}" type="application/rss+xml" href="{{home_page.url}}feed.xml" />
 	<title>{{ t.site.title }}</title>
 </head>
 <body>
