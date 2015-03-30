@@ -18,10 +18,10 @@ permalink: sitemap.xml
   {% if cpage.nav %}
   <url>
     <loc>{{site.url}}{{cpage.url | remove: "index.html"}}</loc>
-    {% assign alts = site.pages | where: "name", cpage.name %}
+    {% assign alts = site.pages | where: "nav", cpage.nav %}
     {% for alt in alts %}
       {% if alt.lang %}
-      <xhtml:link rel="alternate" hreflang="{{alt.lang}}" href="{{site.url}}{{alt.url | remove: "index.html"}}" />
+      <xhtml:link rel="alternate" hreflang="{{alt.lang}}" href="{{site.url}}{{alt.url}}" />
       {% endif %}
     {% endfor %}
   </url>
