@@ -54,6 +54,7 @@ highlighter: pygments
 sass:
   style: :compressed
 
+markdown: kramdown
 kramdown:
   header_offset: 2
 
