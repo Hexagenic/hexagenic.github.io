@@ -47,7 +47,7 @@ We can explore forwards or backwards through the post array with a recursive
 template. It will keep going until it either finds a post of the correct
 language or the value `nil`.
  
-{% highlight html %}
+{% highlight liquid %}
 {% raw %}
 
 {% assign next_post = include.next_post %}
@@ -65,7 +65,7 @@ language or the value `nil`.
 
 To use it:
 
-{% highlight html %}
+{% highlight liquid %}
 {% raw %}
 
 {% include next_button.html next_post=page.next %}
