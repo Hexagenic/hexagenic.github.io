@@ -4,6 +4,7 @@
 	<p>&copy; <a href="mailto:{{site.author.email}}">{{ site.author.full_name }}</a> {{ site.time | date: "%Y" }} <br>
 
 	{% capture gh_source_url %}{{ site.github.repository_url }}/blob/master/{{ page.path }}{% endcapture %}
+	{% capture gh_history_url %}{{ site.github.repository_url }}/commits/master/{{ page.path }}{% endcapture %}
 	{% capture gh_rev_url %}{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}{% endcapture %}
 
 	{% assign gendate = site.time | date: "%F %R" %}
@@ -12,6 +13,6 @@
 
 	{{ t.footer.generated | replace: "$at$", gendate | replace: "$by$", jekyllLink}} <br>
 	
-	<a href="{{gh_source_url}}">{{ t.footer.pagesource }}</a>
+	<a href="{{gh_source_url}}">{{ t.footer.pagesource }}</a> (<a href="{{gh_history_url}}">{{ t.footer.history }}</a>)
 	</p>
 </footer>

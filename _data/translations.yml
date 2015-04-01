@@ -13,6 +13,7 @@ en:
   footer:
     generated: Generated $at$ by $by$
     pagesource: Page source
+    history: History
 
 ja:
   site:
@@ -42,3 +43,4 @@ sv:
   footer:
     generated: Genererades $at$ av $by$
     pagesource: Sidkälla
+    history: Historik
