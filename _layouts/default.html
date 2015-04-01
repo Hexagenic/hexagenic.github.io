@@ -41,17 +41,18 @@ layout: compress
 	<div class="column">
 		<main>
 			{% if page.type == "posts" %}
-			<article>
-			{% endif %}
-			<h2>{{ page.title }}</h2>
-			{{ content }}
-			{% if page.type == "posts" %}
+			<article itemscope itemtype="http://schema.org/Article">
+			<h2 itemprop="name">{{ page.title }}</h2>
+			<div itemprop="articleBody">{{ content }}</div>
 			<nav class="article-buttons">
 				{% include next_button.html next_post=page.next %}
 				{% include prev_button.html prev_post=page.previous %}
 				<div class="spacer" style="clear: both;"></div>
 			</nav>
 			</article>
+			{% else %}
+			<h2 >{{ page.title }}</h2>
+			{{ content }}
 			{% endif %}
 		</main>
 		{% include footer.html %}
