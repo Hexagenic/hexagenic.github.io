@@ -2,4 +2,4 @@ language: ruby
 before_script: bundle update
 script: "bundle exec jekyll build"
 sudo: false
-rvm: [2.2]
+rvm: [2.2.1]
