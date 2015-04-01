@@ -46,7 +46,7 @@ artikel.
 
 Vi kan utforska arrayn frammåt och bakåt med en rekursiv mall. Den kommer fortsätta tills den antingen stöter på en artikel av korrekt språk eller värdet `nil`.
 
-{% highlight html %}
+{% highlight liquid %}
 {% raw %}
 
 {% assign next_post = include.next_post %}
@@ -64,7 +64,7 @@ Vi kan utforska arrayn frammåt och bakåt med en rekursiv mall. Den kommer fort
 
 För att använda:
 
-{% highlight html %}
+{% highlight liquid %}
 {% raw %}
 
 {% include next_button.html next_post=page.next %}
