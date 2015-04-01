@@ -5,7 +5,7 @@ permalink: /:categories/:year/:month/:title/
 languages: [en, sv]
 nav: [home, about]
 url: http://hexagenic.net
-
+relative_permalinks: false
 
 solarizedTheme: dark
 
