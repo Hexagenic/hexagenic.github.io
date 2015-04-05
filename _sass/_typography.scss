@@ -40,7 +40,11 @@ main {
 		margin-bottom: 1.25em;
 		padding-left: 2em;
 		font-size: 1.25em;
-		
+
+		sup {
+			vertical-align: top;
+			font-size: 0.7em;
+		}
 	}
 
 	p, div.highlight, ul, ol {
