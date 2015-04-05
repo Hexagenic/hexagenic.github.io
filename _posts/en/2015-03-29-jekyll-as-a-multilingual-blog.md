@@ -40,7 +40,7 @@ for post pages.
 These variables point to the next and previous post relative to the current one,
 but will unfortunately point to posts of another language  most of time.
 However, the object returned by these also have the `next` and `previous`
-varaibles. Which means you can do `page.next.next.next...` to traverse the
+variables. Which means you can do `page.next.next.next...` to traverse the
 array in relation to the current post.
 
 We can explore forwards or backwards through the post array with a recursive
