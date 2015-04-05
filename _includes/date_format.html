@@ -46,7 +46,7 @@
 
 {% if include.format == "long" %}
   {% if page.lang == "en" %}
-    The {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
+    {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
   {% elsif page.lang == "sv" %}
     Den {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
   {% elsif page.lang == "ja" %}
