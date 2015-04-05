@@ -20,6 +20,7 @@ layout: compress
 	{% endif %}
 	<link rel="{{rss_rel}}" type="application/rss+xml" href="{{home_page.url}}feed.xml" />
 	<title>{{ t.site.title }}</title>
+	<link rel="author" href="{{site.author.gplus}}">
 </head>
 <body>
 	<header rel="banner">
@@ -43,6 +44,7 @@ layout: compress
 			{% if page.type == "posts" %}
 			<article itemscope itemtype="http://schema.org/Article">
 			<h2 itemprop="name">{{ page.title }}</h2>
+			<p class="article-date" itemprop="datePublished" content="{{page.date | date: '%F'}}">{% include date_format.html date=page.date format="long" %}</p>
 			<div itemprop="articleBody">{{ content }}</div>
 			<nav class="article-buttons">
 				{% include next_button.html next_post=page.next %}

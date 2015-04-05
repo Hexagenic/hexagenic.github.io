@@ -26,18 +26,31 @@
   {% endif %}
 {% endif %}
 
+{% capture niceDay %}{% if page.lang == "ja" %}
+  {{include.date | date: "%-d日"}}
+{% elsif page.lang == "en" %}
+  {% assign d = include.date | date: "%-d" %}
+  {{ d }}<sup>{% case d %}
+    {% when '1' or '21' or '31' %}st
+    {% when '2' or '22' %}nd
+    {% when '3' or '23' %}rd
+    {% else %}th
+  {% endcase %}</sup>
+{% else %}
+  {{include.date | date: "%-d"}}
+{% endif %}{% endcapture %}
+
 {% if include.format == "day" %}
-  {% if page.lang == "ja" %}
-    {{include.date | date: "%-d日"}}
-  {% elsif page.lang == "en" %}
-    {% assign d = include.date | date: "%-d" %}
-    {{ d }}<sup>{% case d %}
-      {% when '1' or '21' or '31' %}st
-      {% when '2' or '22' %}nd
-      {% when '3' or '23' %}rd
-      {% else %}th
-    {% endcase %}</sup>
-  {% else %}
-    {{include.date | date: "%-d"}}
+{{niceDay}}
+{% endif %}
+
+{% if include.format == "long" %}
+  {% if page.lang == "en" %}
+    The {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
+  {% elsif page.lang == "sv" %}
+    Den {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
+  {% elsif page.lang == "ja" %}
+    {{include.date | date: "%Y年%m月%-d日"}}
   {% endif %}
+
 {% endif %}
