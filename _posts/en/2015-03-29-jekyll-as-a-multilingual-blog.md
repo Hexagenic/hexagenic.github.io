@@ -22,7 +22,7 @@ Making Jekyll Multilingual
 ==========================
 
 Jekyll is not multilingual by default, but it is easy to add this
-functionality as I found by reading [an article by Sylvian Duran]
+functionality as I found by reading [an article by Sylvain Durand]
 [sylvianjekml]. 
 
 One thing to note about how Jekyll builds up the data structures is that after
@@ -76,4 +76,4 @@ To use it:
 
 
 [jekyll]: http://jekyllrb.com
-[sylvianjekml]: https://sylvain.durand.tf/making-jekyll-multilingual/
+[sylvianjekml]: http://sylvaindurand.org/making-jekyll-multilingual/
