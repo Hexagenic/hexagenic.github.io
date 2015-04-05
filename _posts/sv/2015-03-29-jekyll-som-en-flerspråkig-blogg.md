@@ -22,7 +22,7 @@ Att göra Jekyll flerspråkig
 ===========================
 
 Jekyll är inte flerspråkig som standard, men det är lätt att lägga till denna
-funktionalitet som jag upptäckte genom att läsa [en artikel av Sylvian Duran]
+funktionalitet som jag upptäckte genom att läsa [en artikel av Sylvain Durand]
 [sylvianjekml].
 
 En sak att notera om hur Jekyll binder datastrukturerna är att efter den arbetet
@@ -75,4 +75,4 @@ För att använda:
 
 
 [jekyll]: http://jekyllrb.com
-[sylvianjekml]: https://sylvain.durand.tf/making-jekyll-multilingual/
+[sylvianjekml]: http://sylvaindurand.org/making-jekyll-multilingual/
