@@ -1,5 +1,5 @@
 ---
-layout: compress
+layout:
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 {% assign t = site.data.translations[page.lang] %}
@@ -19,7 +19,7 @@ layout: compress
 			<link>{{site.url}}{{post.url}}</link>
 			<guid isPermaLink="false">{{post.id}}</guid>
 			<pubDate>{{post.date | date_to_rfc822}}</pubDate>
-			<description><![CDATA[{{ post.content }}]]></description>
+			<description>{{ post.content | xml_escape }}</description>
 		</item>
 		{% endfor %}
 	</channel>
