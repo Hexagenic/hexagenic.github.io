@@ -45,12 +45,10 @@
 {% endif %}
 
 {% if include.format == "long" %}
-  {% if page.lang == "en" %}
-    The {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
-  {% elsif page.lang == "sv" %}
-    Den {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
-  {% elsif page.lang == "ja" %}
+  {% if page.lang == "ja" %}
     {{include.date | date: "%Y年%m月%-d日"}}
+  {% else %}
+    {{niceDay}} {{month_name}} {{include.date | date: "%Y"}}
   {% endif %}
 
 {% endif %}
