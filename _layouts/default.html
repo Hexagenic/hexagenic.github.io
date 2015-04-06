@@ -44,7 +44,7 @@ layout: compress
 			{% if page.type == "posts" %}
 			<article itemscope itemtype="http://schema.org/Article">
 			<h2 itemprop="name">{{ page.title }}</h2>
-			<p class="article-date" itemprop="datePublished" content="{{page.date | date: '%F'}}">{% include date_format.html date=page.date format="long" %}</p>
+			<time class="article-date" itemprop="datePublished" datetime="{{page.date | date: '%F'}}">{% include date_format.html date=page.date format="long" %}</time>
 			<div itemprop="articleBody">{{ content }}</div>
 			<nav class="article-buttons">
 				{% include next_button.html next_post=page.next %}
