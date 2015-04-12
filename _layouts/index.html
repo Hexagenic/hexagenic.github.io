@@ -5,14 +5,14 @@ layout: default
 
 {% assign posts=site.posts | where:"lang", page.lang %}
 {% for post in posts %}
-  {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
-  {% if currentyear != year%}
-    {% if year != nil%}
+  {% capture postMonthYear %}{{post.date | date: "%B %Y"}}{% endcapture %}
+  {% if postMonthYear != monthYear%}
+    {% if monthYear != nil%}
     </ul>
     {% endif %}
     <h3>{% include date_format.html date=post.date format="month-year" %}</h3>
     <ul class="article-list">
-    {% capture year %}{{currentyear}}{% endcapture %} 
+    {% capture monthYear %}{{postMonthYear}}{% endcapture %} 
   {% endif %}
     <li><span class="date">{% include date_format.html date=post.date format="day" %}</span> &raquo; <a href="{{ post.url }}">{{ post.title }} </a></li>
 {% endfor %}
