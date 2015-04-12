@@ -5,7 +5,7 @@ lang: en
 permalink: /en/about/
 ---
 
-![avatar]({{ site.github.owner_gravatar_url }}){: .about-avatar}
+<img src="{{ site.github.owner_gravatar_url }}" alt="avatar" class="about-avatar">
 
 This is a personal blog about things I'm working on or have otherwise found to be interesting. The main goal of the blog is to become more fluent in writing Swedish, English, and soon also Japanese.
 
