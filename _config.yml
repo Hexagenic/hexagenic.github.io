@@ -1,6 +1,6 @@
 encoding: utf-8
 timezone: Europe/Stockholm
-exclude: [LICENSE, README.md, Gemfile, Gemfile.lock]
+exclude: [LICENSE, README.md, Gemfile, Gemfile.lock, vendor]
 permalink: /:categories/:year/:month/:title/
 languages: [en, sv]
 nav: [home, about]
