@@ -5,7 +5,7 @@ lang: sv
 permalink: sv/om/
 ---
 
-![avatar]({{ site.github.owner_gravatar_url }}){: .about-avatar}
+<img src="{{ site.github.owner_gravatar_url }}" alt="avatar" class="about-avatar">
 
 Det här är en personlig blogg om saker och ting som jag jobbar på eller på annat sätt finner intressant. Huvudmålet med bloggen är att förbättra min Svenska, Engelska, och i framtiden även Japanska.
 
