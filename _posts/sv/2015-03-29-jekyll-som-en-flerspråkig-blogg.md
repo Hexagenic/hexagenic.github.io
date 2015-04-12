@@ -46,7 +46,7 @@ artikel.
 
 Vi kan utforska arrayn frammåt och bakåt med en rekursiv mall. Den kommer fortsätta tills den antingen stöter på en artikel av korrekt språk eller värdet `nil`.
 
-{% highlight liquid %}
+```liquid
 {% raw %}
 
 {% assign next_post = include.next_post %}
@@ -60,18 +60,18 @@ Vi kan utforska arrayn frammåt och bakåt med en rekursiv mall. Den kommer fort
 {% endif %}
 
 {% endraw %}
-{% endhighlight %}
+```
 
 För att använda:
 
-{% highlight liquid %}
+```liquid
 {% raw %}
 
 {% include next_button.html next_post=page.next %}
 {% include prev_button.html prev_post=page.previous %}
 
 {% endraw %}
-{% endhighlight %}
+```
 
 
 [jekyll]: http://jekyllrb.com

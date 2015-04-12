@@ -55,9 +55,9 @@ highlighter: pygments
 sass:
   style: :compressed
 
-markdown: kramdown
-kramdown:
-  header_offset: 2
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'superscript']
 
 compress_html:
   clippings: all
